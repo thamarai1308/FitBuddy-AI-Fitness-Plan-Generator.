@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitBuddy AI</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="logo">🏃</div>
+    <h1>FitBuddy</h1>
+    <p class="subtitle">AI Fitness Plan Generator</p>
+    <form action="/generate-workout" method="post">
+      <label>Name</label><input name="name" required placeholder="Enter your name">
+      <label>User ID</label><input name="user_id" required placeholder="Example: FB001">
+      <label>Age</label><input name="age" type="number" min="13" max="100" required>
+      <label>Weight (kg)</label><input name="weight" type="number" min="20" max="300" step="0.1" required>
+      <label>Fitness Goal</label>
+      <select name="goal" required>
+        <option value="">Select goal</option>
+        <option>General wellness</option><option>Weight management</option>
+        <option>Muscle strength</option><option>Flexibility</option>
+      </select>
+      <label>Workout Intensity</label>
+      <select name="intensity" required>
+        <option>Low</option><option>Medium</option><option>High</option>
+      </select>
+      <button type="submit">✨ Generate My Plan</button>
+    </form>
+    <a class="admin" href="/view-all-users">View Admin Dashboard →</a>
+  </div>
+</div>
+</body>
+</html>
